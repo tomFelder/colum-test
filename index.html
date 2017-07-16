@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap form test</title>
+
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/bars-pill.min.css" />
+    <link rel='stylesheet' href='css/vendor.css'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/custom.css'>
+
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/examples.css">
+
+    <script src='js/vendor/html5shiv.min.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="jquery.barrating.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#example').barrating({
+          theme: 'fontawesome-stars'
+        });
+      });
+</script>
+  </head>
+  <body>
+    <div id="user-form-section" class="section block-success align-c"> <!-- add 'collapse' back into class-->
+       <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="section-heading">
+              <h5>Just 10 questions!</h5>
+              <h2>How much could you save?</h2>
+              <p>This form gives us enough information to narrow down the top results.</p>
+              <p>We will then contact you to make sure we've found the best deal for you.</p>
+              <p>This service is entirely <b>free</b> for a limited time.</p>
+            </div> <!-- .section-heading -->
+
+            <div class="section-content">
+              <form id="user-form">
+                <input type="hidden" name="_subject" value="User form" />
+                <input type="hidden" name="form-type" />
+
+                <div class="form-section">
+                  <div class="form-section__heading">
+                    <h4>What do you have?</h4>
+                  </div>
+
+                  <div class="form-section__content">
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                          I currently have
+                        </label>
+                        <div class="col-sm-8">
+                          <select name="cover" class="form-control form-control--color">
+                            <option value="">Please select...</option>
+                            <option value="no-cover">No Insurance</option>
+                            <option value="hospital">Hospital</option>
+                            <option value="extras">Extras</option>
+                            <option value="combined">Hospital + Extras</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                          which is provided by
+                        </label>
+                        <div class="col-sm-8">
+                          <select name="provider" class="form-control form-control--color">
+                            <option value="">Please select...</option>
+                            <option value="ACA">ACA</option>
+                            <option value="AHM">ahm</option>
+                            <option value="AUF">Australian Unity</option>
+                            <option value="BUP">Bupa</option>
+                            <option value="CBC">CBHS Corporate</option>
+                            <option value="CDH">CDH</option>
+                            <option value="CPS">CUA Health</option>
+                            <option value="GMH">GMHBA</option>
+                            <option value="FAI">Grand United</option>
+                            <option value="HBF">HBF</option>
+                            <option value="HCF">HCF</option>
+                            <option value="HCI">Health Care Insurance</option>
+                            <option value="HIF">Health Insurance Fund of Australia</option>
+                            <option value="SPS">Health Partners</option>
+                            <option value="HEA">health.com.au</option>
+                            <option value="LHS">Latrobe</option>
+                            <option value="MBP">Medibank Private</option>
+                            <option value="MDF">Mildura</option>
+                            <option value="OMF">onemediafund</option>
+                            <option value="NIB">NIB</option>
+                            <option value="LHS">Latrobe</option>
+                            <option value="LHM">Peoplecare</option>
+                            <option value="PWA">Pheonix</option>
+                            <option value="QCH">Queensland Country Health</option>
+                            <option value="SLM">St. Lukes </option>
+                            <option value="TFS">Transport Health</option>
+                            <option value="WFD">Westfund Limited</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                          that every
+                        </label>
+                        <div class="col-sm-8">
+                          <select name="payment-frequency" class="form-control form-control--color">
+                            <option value="">Please select...</option>
+                            <option value="weekly">Week</option>
+                            <option value="fotnightly">Fortnight</option>
+                            <option value="monthly">Month</option>
+                            <option value="yearly">Year</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-horizontal">
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label">
+                          roughly costs me
+                        </label>
+                        <div class="col-sm-8">
+                          <select name="price" class="form-control form-control--color">
+                            <!-- These values will need to be more granular when we have multiple forms -->
+                            <option value="">Please select...</option>
+                            <option value="$25">$25</option>
+                            <option value="$50">$50</option>
+                            <option value="$75">$75</option>
+                            <option value="$100">$100</option>
+                            <option value="$125">$125</option>
+                            <option value="$150">$150</option>
+                            <option value="$175">$175</option>
+                            <option value="$200">$200</option>
+                            <option value="$225">$225</option>
+                            <option value="$250">$250</option>
+                            <option value="$275">$275</option>
+                            <option value="$300+">$300+</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <div class="form-section__heading">
+                    <h4>What would you like?</h4>
+                    <p>In an average year, how often would you like to;</p>
+                  </div>
+
+                  <div class="form-section__content">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                          <label class="control-label col-sm-4">
+                            Replace your glasses?
+                          </label>
+                          <div class="col-sm-8">
+                            <select id="glasses-field" class="form-control form-control--color" name="glasses" autocomplete="off">
+                              <option value=""></option>
+                              <option value="never">Never</option>
+                              <option value="1-2-times">1 - 2 Times</option>
+                              <option value="2-5-times">2 - 5 Times</option>
+                              <option value="5+-times">5+ Times </option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label col-sm-4">
+                            Visit the dentist?
+                          </label>
+                          <div class="col-sm-8">
+                            <select id="dental-field" class="form-control form-control--color" name="dental" autocomplete="off">
+                              <option value=""></option>
+                              <option value="never">Never</option>
+                              <option value="1-2-times">1 - 2 Times</option>
+                              <option value="2-5-times">2 - 5 Times</option>
+                              <option value="5+-times">5+ Times </option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label col-sm-4">
+                            Visit the physio?
+                          </label>
+                          <div class="col-sm-8">
+                            <select id="physio-field" class="form-control form-control--color" name="physio" autocomplete="off">
+                              <option value=""></option>
+                              <option value="never">Never</option>
+                              <option value="1-2-times">1 - 2 Times</option>
+                              <option value="2-5-times">2 - 5 Times</option>
+                              <option value="5+-times">5+ Times </option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="control-label col-sm-4">
+                            Visit the chiro?
+                          </label>
+                          <div class="col-sm-8">
+                            <select id="chiro-field" class="form-control form-control--color" name="chiro" autocomplete="off">
+                              <option value=""></option>
+                              <option value="never">Never</option>
+                              <option value="1-2-times">1 - 2 Times</option>
+                              <option value="2-5-times">2 - 5 Times</option>
+                              <option value="5+-times">5+ Times </option>
+                            </select>
+                          </div>
+                        </div>
+
+
+                        <p class="form-section__content-heading">To make sure we get it right, we would like to know;</p>
+
+                      <div class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-sm-4 control-label">
+                            What is your main priority?
+                          </label>
+                          <div class="col-sm-8">
+                            <select name="intent" class="form-control form-control--color">
+                              <option value="">Please select...</option>
+                              <option value="cheaper">Need something cheaper</option>
+                              <option value="better">Need better cover</option>
+                              <option value="tax">Cheapest possible to save on tax</option>
+                              <option value="child">Planning on having a child</option>
+                              <option value="concern">Have a specific health concern</option>
+                              <option value="compare">Just want to compare</option>
+                              <option value="other">Other</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-4">
+                          Anything else?
+                        </label>
+                        <div class="col-sm-8">
+                          <textarea class="form-control form-control--color" name="notes" rows="4" placeholder="Plan on starting a family soon? Maybe know you're going to have some detal work done?"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                <div class="form-section form-section--last">
+                  <div class="form-section__heading">
+                    <h4>Lets do this, and do it well!</h4>
+                    <p>We will get in touch by email to find a time that works for you to talk. On the call we can ensure you are getting the best possibly deal for your circumstances.</p>
+                  </div>
+
+                  <div class="form-section__content">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="form-horizontal m-b-5">
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                              Name
+                            </label>
+                            <div class="col-sm-8">
+                              <input class="form-control form-control--color" type="text" name="name" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-horizontal m-b-5">
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                              Email
+                            </label>
+                            <div class="col-sm-8">
+                              <input class="form-control form-control--color" type="email" name="email" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-horizontal m-b-5">
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">
+                              Phone (optional)
+                            </label>
+                            <div class="col-sm-8">
+                              <input class="form-control form-control--color" type"text" name="phone" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <button type"submit" class="btn btn-primary m-y-5">
+                    Submit
+                  </button>
+                </div>
+
+                <div class="form-notify"></div>
+
+              </form>
+            </div> <!-- .section-content -->
+          </div>
+        </div>
+      </div>
+    </div> <!-- #user_form -->
+
+  </body>
+</html>
